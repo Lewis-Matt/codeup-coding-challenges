@@ -19,10 +19,10 @@
 console.log('---My Method---')
 
 function sumUpThoseDigits(num) {
-    // Attempt to convert input to integer
-    num = Number(num.toFixed(0));
+    // Attempt to convert input to integer (Note that toFixed returns a string, so enclose everything in the Number constructor)
+    num = Number((num).toFixed(0));
     // TEST LOG
-    // console.log(num)
+    console.log(typeof num)
     // Validate that the input is a number
     if (typeof num === 'number') {
         // Array.from() creates an array from array-like objects (which a number is not).
@@ -42,7 +42,7 @@ function sumUpThoseDigits(num) {
     return ('The value you entered is not a number')
 }
 
-console.log(sumUpThoseDigits('523'));
+console.log(sumUpThoseDigits(4324));
 
 //  Array.from() has an optional parameter mapFn, which allows you to execute a map()
 //  function on each element of the array being created.
