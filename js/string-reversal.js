@@ -7,12 +7,42 @@
 // Plan on converting to array, reversing the array, converting back to string
 // Not sure if it is supposed to handle separate strings, but it implies a single string
 
-function stringReversal (str) {
+function stringReversal(str) {
     let arr = str.split('').reverse().join('');
     console.log(arr)
 }
-stringReversal('Matt')
 
+stringReversal('Matt Is The Best')
+
+console.log('------------------------------')
 // TODO:
-// It says the point is to write my own function, and I don't know if that means without using JS methods, so I will
-// try to write something from scratch without any built in methods..
+// It says the point is to write my own function, and I don't know if that means without using JS methods (specifically reverse),
+// so I will try to write something from scratch.
+
+// Custom join function (not using built-in join() method)
+let join = (arr) => {
+    let result = '';
+    for (let i = 0; i < arr.length; i++) {
+        result += arr[i];
+    }
+    return result;
+};
+
+function strRev(str) {
+    // Pretty much have to use a method to get the str into an array
+    // Could also spread: arr = [...str]
+    let arr = Array.from(str);
+    // TEST LOG
+    // console.log(arr)
+    // Reverse array w/o using reverse() method
+    let newArr =[];
+    for(let i = 0; i < arr.length; i++) {
+        newArr.unshift(arr[i]);
+        // TEST LOG
+        // console.log(newArr);
+    }
+    console.log(join(newArr));
+}
+strRev('Matt Is The Best')
+
+
