@@ -19,7 +19,7 @@ console.log('------------------------------')
 // It says the point is to write my own function, and I don't know if that means without using JS methods (specifically reverse),
 // so I will try to write something from scratch.
 
-// Custom join function (not using built-in join() method)
+// Custom join function (not using built-in join() method), called in strRev()
 let join = (arr) => {
     let result = '';
     for (let i = 0; i < arr.length; i++) {
@@ -39,9 +39,9 @@ function strRev(str) {
     for(let i = 0; i < arr.length; i++) {
         newArr.unshift(arr[i]);
         // TEST LOG
-        // console.log(newArr);
+        console.log(newArr);
     }
-    console.log(join(newArr));
+    // console.log(join(newArr));
 }
 strRev('Matt Is The Best')
 
