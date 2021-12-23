@@ -35,14 +35,15 @@ function strRev(str) {
     // TEST LOG
     // console.log(arr)
     // Reverse array w/o using reverse() method
-    let newArr =[];
-    for(let i = 0; i < arr.length; i++) {
+    let newArr = [];
+    for (let i = 0; i < arr.length; i++) {
         newArr.unshift(arr[i]);
         // TEST LOG
         console.log(newArr);
     }
-    // console.log(join(newArr));
+    console.log(join(newArr));
 }
-strRev('Matt Is The Best')
+
+strRev('Matt Is The Best');
 
 

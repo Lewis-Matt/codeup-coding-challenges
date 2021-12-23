@@ -14,9 +14,13 @@ Xn = Xn−1 + Xn−2
 
 // User chooses number of times (n)
 function fibonacci(n) {
+    // Need to start with an array containing the first 2 fib numbers
     let fibNum = [0, 1];
+    // Start the iteration from the 3rd index of the array
     for (let i = 2; i < n; i++) {
+        // Xn = Xn−1 + Xn−2
         fibNum.push(fibNum[i - 2] + fibNum[i - 1]);
+        // Log each element of the array
         console.log(fibNum[i]);
     }
 }

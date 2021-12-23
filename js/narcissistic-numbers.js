@@ -10,3 +10,8 @@ If n is 153, then m (the number of digits) is 3 and:
 So, 153 is a narcissistic number.
 Objective: Write a script to generate and output the first 25 narcissistic integers.*/
 
+// Pseudo:
+// Convert the number to a string, then get the length. This is m
+// n is the number itself
+// set up a loop (do - while?) with an if-statement that counts the number of times the condition is passed (25)
+// if (1+5+3)^m == m -->> narcNum ++
