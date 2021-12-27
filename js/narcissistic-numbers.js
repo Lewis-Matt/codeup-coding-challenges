@@ -20,7 +20,10 @@ function narc(num) {
     if (typeof num !== 'number') {
         return "Enter a number without quotes"
     }
-
+    let n = num;
+    let m = num.toString().length;
+    // Test Log
+    // return m;
 }
 
-console.log(narc('five'));
+console.log(narc(5));
