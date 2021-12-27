@@ -15,3 +15,12 @@ Objective: Write a script to generate and output the first 25 narcissistic integ
 // n is the number itself
 // set up a loop (do - while?) with an if-statement that counts the number of times the condition is passed (25)
 // if (1+5+3)^m == m -->> narcNum ++
+
+function narc(num) {
+    if (typeof num !== 'number') {
+        return "Enter a number without quotes"
+    }
+
+}
+
+console.log(narc('five'));
