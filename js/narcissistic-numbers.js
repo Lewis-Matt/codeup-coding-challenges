@@ -18,6 +18,7 @@ Objective: Write a script to generate and output the first 25 narcissistic integ
 
 // User inputs a number (num); returns true if it is a narcissistic number
 function narc(num) {
+    // Ensure an integer is entered
     if (typeof num !== 'number') {
         return "Enter a number without quotes"
     }
@@ -47,3 +48,37 @@ function narc(num) {
 }
 
 console.log(narc(153));
+
+
+
+// Get the first 25 narc numbers
+let testNum = 1;
+let counter = 0;
+do {
+    function narcNum() {
+        let m = testNum.toString().length;
+        let numArr = Array.from(String(testNum), String);
+        console.log(numArr);
+
+        let tempArr = [];
+        for (let i = 0; i < numArr.length; i++) {
+            tempArr[i] = numArr[i] ** m;
+        }
+        console.log(tempArr);
+
+        let sum = 0;
+        for (let i = 0; i < tempArr.length; i++) {
+            sum += tempArr[i];
+        }
+
+        let finalArr = [];
+        if (sum === testNum) {
+            finalArr.push(testNum);
+            testNum++;
+            counter++;
+            console.log(finalArr);
+        }
+        return finalArr;
+    }
+    console.log(narcNum());
+} while (counter <= 25);
